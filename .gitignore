@@ -39,8 +39,8 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/
+# Streamlit (allow config)
+.streamlit/secrets.toml
 
 # Logs
 *.log
