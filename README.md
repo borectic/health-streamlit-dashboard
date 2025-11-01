@@ -80,6 +80,43 @@ The dashboard expects the following Supabase tables:
 - **Supabase**: Backend database
 - **Python**: Core programming language
 
+## Deployment
+
+### Streamlit Cloud (Recommended)
+
+1. **Fork this repository** to your GitHub account
+2. **Visit [share.streamlit.io](https://share.streamlit.io)**
+3. **Connect your GitHub account**
+4. **Deploy** by selecting this repository
+5. **Add environment variables** in Streamlit Cloud settings:
+   - `SUPABASE_URL`
+   - `SUPABASE_SERVICE_KEY`
+
+### Local Development
+
+```bash
+# Clone and setup
+git clone https://github.com/borectic/health-streamlit-dashboard.git
+cd health-streamlit-dashboard
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your Supabase credentials
+
+# Run locally
+streamlit run app.py
+```
+
+### Environment Variables
+
+Required environment variables for deployment:
+
+- `SUPABASE_URL`: Your Supabase project URL
+- `SUPABASE_SERVICE_KEY`: Your Supabase service role key (for RLS bypass)
+
 ## Contributing
 
 1. Fork the repository
